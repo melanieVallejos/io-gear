@@ -1,0 +1,7 @@
+{
+  "name": "Gear",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
