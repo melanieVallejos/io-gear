@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+        Browse Sports
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,26 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Browse Sports</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-list>
+          <ion-item-sliding *ngFor="let sport of sports| async">
+            <!-- <ion-item (click)="goToSportGear(sport)"> -->
+                <ion-item>
+      <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Get here a customized workout gear for beginners</ion-card-subtitle>
+            <ion-card-title>{{sport.name}}</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+              {{sport.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
 </ion-content>

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+        Workout gear
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{sport.name}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+      <ion-item-sliding *ngFor="let wg of workoutGear">
+        <ion-item>
+          <ion-label>Options</ion-label>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option>{{wg.level}}</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+</ion-content>
